@@ -39,8 +39,8 @@ public class Post {
 //    @Column(name = "creation_date",nullable = false,updatable = false)
 //    private LocalDate creationDate;
 
-    @OneToMany(mappedBy = "post",cascade = CascadeType.REMOVE,fetch = FetchType.EAGER)
-    private Collection<Comment> comments;
+//    @OneToMany(mappedBy = "post",cascade = CascadeType.REMOVE,fetch = FetchType.EAGER)
+//    private Collection<Comment> comments;
 
 
 
