@@ -8,6 +8,9 @@ import zw.co.afrosoft.security.dto.PostRequest;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class PostServiceImpl implements PostService{
 
@@ -24,7 +27,21 @@ public class PostServiceImpl implements PostService{
         post.setTitle(request.getTitle());
         post.setDatePosted(LocalDateTime.now());
 //        post.setCreationDate(LocalDate.from(LocalDateTime.now()));
-
         return ResponseEntity.ok().body(postRepo.save(post));
+    }
+    @Override
+    public ResponseEntity findAll() {
+        List<Post> posts =  postRepo.findAll();
+        return ResponseEntity.ok().body(posts);
+    }
+
+    @Override
+    public ResponseEntity delete(Long id) {
+        Optional<Post> post = postRepo.findById(id);
+        if(post.isPresent())
+        { postRepo.delete(post.get());
+        return ResponseEntity.ok().body("Deleted post successfully");}
+
+        return ResponseEntity.ok().body("Post not available");
     }
 }

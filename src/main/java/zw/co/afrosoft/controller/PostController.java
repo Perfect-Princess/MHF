@@ -22,4 +22,12 @@ public class PostController {
         return postService.createPost(postRequest);
     }
 
+    @GetMapping("/findAll")
+    ResponseEntity findAll(){
+        return postService.findAll();
+    }
+    @DeleteMapping("/delete/{id}")
+    ResponseEntity delete(@PathVariable Long id){
+        return postService.delete(id);
+    }
 }

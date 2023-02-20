@@ -25,4 +25,5 @@ public class RegistrationController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(registrationResponse);
 	}
 
+
 }
