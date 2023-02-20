@@ -15,11 +15,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableJpaRepositories
 @EnableAspectJAutoProxy
 
-public class SpringBootBoilerplateApplication {
+public class MentalHealthApp {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(SpringBootBoilerplateApplication.class, args);
+		SpringApplication.run(MentalHealthApp.class, args);
 	}
 
 	@Bean

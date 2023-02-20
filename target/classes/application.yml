@@ -1,22 +1,20 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/
-    username: postgres
-    password: example
+    url: jdbc:mysql://localhost:3306/blog
+    username: root
+    password: Perfect2001
 
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: create
-      show-sql: true
-      format-sql: true
-      type: info
-      use-sql-comments: true
-      properties:
-        hibernate.use_sql_comments: true
-        hibernate.format_sql: true
+    ddl-auto: create
+    show-sql: true
+    format-sql: true
+    type: info
+    use-sql-comments: true
+    properties:
+      hibernate.use_sql_comments: true
+      hibernate.format_sql: true
 
 springdoc:
   show-actuator: true
@@ -48,7 +46,7 @@ swagger:
   contact-name: Perfect Makuwerere
   contact-mail: perfect.makuwerere@afrosoft.co.zw
   contact-url:
-  app-name: Spring Boot Boilerplate Project
+  app-name: MHF
   app-description: "Spring Boot"
   app-version: 2.0.0
   app-license-url: https://www.apache.org/licenses/LICENSE-2.0.html
